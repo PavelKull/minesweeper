@@ -1,0 +1,591 @@
+html {
+  height: 95%;
+}
+
+body {
+  margin-left: 0;
+  margin-top: 15px;
+  font-family: arial;
+  font-size: 12px;
+  height: 100%;
+}
+
+.night-mode {
+  background-color: black;
+  color: #888;
+}
+
+.ess-ee-oh {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+
+.outer-container {
+  vertical-align: top;
+  text-align: left;
+  text-align: center;
+}
+
+.inner-container {
+  display: inline-block;
+  text-align: left;
+}
+
+.left-column,#center-column,.right-column {
+  float: left;
+}
+
+.right-column {
+ margin-left: 90px;
+}
+
+@media only screen and (max-width:700px) {
+  .left-column,.right-column {
+    display: none;
+  }
+
+  #center-column {
+    margin-left: 20px;
+  }
+
+  body {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  #game {
+    tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -moz-tap-highlight-color: rgba(0,0,0,0);
+    -ms-tap-highlight-color: rgba(0,0,0,0);
+  }
+}
+
+.left-column {
+  margin-right: 10px;
+}
+
+.left-column,.right-column {
+  width: 160px;
+}
+
+.night-ad {
+  display: none;
+}
+
+.night-mode .day-ad {
+  display: none;
+}
+
+.night-mode .night-ad {
+  display: block;
+}
+
+#game-container {
+  position: relative;
+  margin-right: 20px;
+}
+
+#options-link,#display-link,#controls-link {
+  color: blue;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.night-mode #options-link,.night-mode #display-link,.night-mode #controls-link,a {
+  color: #069;
+}
+
+#game {
+  background-color: silver;
+}
+
+.night-mode #game {
+  background-color: #7e7e7e;
+}
+
+.dialog {
+  background-color: #EEE;
+  border: 1px solid #444;
+  position: absolute;
+  display: none;
+  z-index: 1;
+}
+
+.night-mode .dialog {
+  background-color: #BBB;
+  color: #444;
+}
+
+.dialog-title {
+  color: white;
+  font-weight: bold;
+  background-color: #06f;
+}
+
+.night-mode .dialog-title {
+  color: #AAA;
+  background-color: #184292;
+}
+
+.dialog-bar {
+  background-color: #DDD;
+}
+
+.night-mode .dialog-bar {
+  background-color: #AAA;
+}
+
+#controls ul {
+  padding: 0 0 0 12px;
+  margin: 0;
+}
+
+#controls li {
+  margin-bottom: 2px;
+}
+
+.dialog-close {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+.night-mode .dialog-close {
+  color: #AAA;
+}
+
+.dialog-text-input {
+  width: 30px;
+  font-size: 12px;
+}
+
+.dialog td {
+  padding: 3px;
+  white-space: nowrap;
+}
+
+.dialog input[type="checkbox"],.dialog input[type="radio"] {
+  margin: 0 3px 0 0;
+  vertical-align: top;
+  padding: 0;
+}
+
+#game div {
+  float: left;
+  line-height: 0;
+  font-size: 0;
+}
+
+#footer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  clear: both;
+}
+
+#message {
+  margin-top: 15px;
+  color: green;
+  width: 450px;
+}
+
+#share {
+  display: none;
+  width: 480px;
+  margin-top: 15px;
+  position: relative;
+}
+
+#share-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-weight: bold;
+  cursor: pointer;
+  color: #ccc;
+}
+
+#share-blurb {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 5px;
+  background: #f4f4f4;
+  position: relative;
+}
+
+#share-open-quote {
+  position: absolute;
+  font-size: 56px;
+  line-height: 56px;
+  color: #ccc;
+  left: -12px;
+  top: -11px;
+}
+
+#share-close-quote {
+  position: absolute;
+  font-size: 56px;
+  line-height: 56px;
+  color: #ccc;
+  left: 460px;
+  top: 20px;
+}
+
+#scores-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#scores-tabs {
+  height: 30px;
+}
+
+.scores-tab {
+  float: left;
+  margin-right: 20px;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.scores-tab-selected {
+  font-weight: bold;
+  color: black;
+}
+
+.night-mode .scores-tab {
+  color: #666;
+}
+
+.night-mode .scores-tab-selected {
+  color: #069;
+}
+
+.scores-pane {
+  width: 500px;
+}
+
+.scores-pane table {
+  width: 100%;
+}
+
+.scores-pane th,.scores-pane td {
+  width: 33%;
+  text-align: left;
+  vertical-align: top;
+}
+
+.scores-pane th {
+  padding-bottom: 5px;
+}
+
+.scores-number {
+  float: left;
+  width: 20px;
+  clear: left;
+}
+
+.scores-name {
+  float: left;
+  width: 115px;
+}
+
+.flag-animation {
+  position: absolute;
+  pointer-events: none;
+  transition: top .3s,left .3s,width .3s,height .3s,opacity .3s;
+  -webkit-transition: top .3s,left .3s,width .3s,height .3s,opacity .3s;
+  -moz-transition: top .3s,left .3s,width .3s,height .3s,opacity .3s;
+  -ms-transition: top .3s,left .3s,width .3s,height .3s,opacity .3s;
+}
+
+.z100 #game div {
+  background-image: url('sprite.gif');
+}
+
+
+.z100 .time0 {
+  background-position: -126px 0;
+  width: 13px;
+  height: 23px;
+}
+
+.z100 .time1 {
+  background-position: 0 0;
+  width: 13px;
+  height: 23px;
+}
+
+.z100 .time2 {
+  background-position: -14px 0;
+  width: 13px;
+  height: 23px;
+}
+
+.z100 .time3 {
+  background-position: -28px 0;
+  width: 13px;
+  height: 23px;
+}
+
+.z100 .time4 {
+  background-position: -42px 0;
+  width: 13px;
+  height: 23px;
+}
+
+.z100 .time5 {
+  background-position: -56px 0;
+  width: 13px;
+  height: 23px;
+}
+
+.z100 .time6 {
+  background-position: -70px 0;
+  width: 13px;
+  height: 23px;
+}
+
+.z100 .time7 {
+  background-position: -84px 0;
+  width: 13px;
+  height: 23px;
+}
+
+.z100 .time8 {
+  background-position: -98px 0;
+  width: 13px;
+  height: 23px;
+}
+
+.z100 .time9 {
+  background-position: -112px 0;
+  width: 13px;
+  height: 23px;
+}
+
+.z100 .open0 {
+  background-position: -17px -51px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .open1 {
+  background-position: 0 -68px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .open2 {
+  background-position: -17px -68px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .open3 {
+  background-position: -34px -68px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .open4 {
+  background-position: -51px -68px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .open5 {
+  background-position: -68px -68px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .open6 {
+  background-position: -85px -68px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .open7 {
+  background-position: -102px -68px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .open8 {
+  background-position: -119px -68px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .blank {
+  background-position: 0 -51px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .bombflagged {
+  background-position: -34px -51px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .bombdeath {
+  background-position: -102px -51px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .bombmisflagged {
+  background-position: -119px -51px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .bombrevealed {
+  background-position: -85px -51px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .question {
+  background-position: -51px -51px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .questionpressed {
+  background-position: -68px -51px;
+  width: 16px;
+  height: 16px;
+}
+
+.z100 .facesmile {
+  background-position: 0 -24px;
+  width: 26px;
+  height: 26px;
+}
+
+.z100 .facepressed {
+  background-position: -27px -24px;
+  width: 26px;
+  height: 26px;
+}
+
+.z100 .faceooh {
+  background-position: -54px -24px;
+  width: 26px;
+  height: 26px;
+}
+
+.z100 .facedead {
+  background-position: -108px -24px;
+  width: 26px;
+  height: 26px;
+}
+
+.z100 .facewin {
+  background-position: -81px -24px;
+  width: 26px;
+  height: 26px;
+}
+
+.z100 .bordertl {
+  background-position: -18px -52px;
+  width: 10px;
+  height: 10px;
+}
+
+.z100 .bordertr {
+  background-position: -18px -52px;
+  width: 10px;
+  height: 10px;
+}
+
+.z100 .borderbl {
+  background-position: -18px -52px;
+  width: 10px;
+  height: 10px;
+}
+
+.z100 .borderbr {
+  background-position: -18px -52px;
+  width: 10px;
+  height: 10px;
+}
+
+.z100 .bordertb {
+  background-position: -18px -52px;
+  width: 16px;
+  height: 10px;
+}
+
+.z100 .borderjointl {
+  background-position: -18px -52px;
+  width: 10px;
+  height: 10px;
+}
+
+.z100 .borderjointr {
+  background-position: -18px -52px;
+  width: 10px;
+  height: 10px;
+}
+
+.z100 .borderlr {
+  background-position: -18px -52px;
+  width: 10px;
+  height: 16px;
+}
+
+.z100 .borderlrlong {
+  background-position: -138px -27px;
+  width: 10px;
+  height: 32px;
+}
+
+.z100 #mines_hundreds {
+  margin: 4px 0 5px 6px;
+}
+
+.z100 #mines_tens {
+  margin: 4px 0 5px 0;
+}
+
+.z100 #mines_ones {
+  margin: 4px 0 5px 0;
+}
+
+.z100 #seconds_hundreds {
+  margin: 4px 0 5px 0;
+}
+
+.z100 #seconds_tens {
+  margin: 4px 0 5px 0;
+}
+
+.z100 #seconds_ones {
+  margin: 4px 6px 5px 0;
+}
+
+.z100 #face {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.z100 .dialog {
+  left: 16px;
+  top: 74px;
+}
+
+
+
